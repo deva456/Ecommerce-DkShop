@@ -1,0 +1,51 @@
+<div class="checkout_products" *ngIf="product.length !=0"><!-- if there are products in cart-->
+
+  <div class="checkout_product" *ngFor="let p of product"><!--running a for loop-->
+
+     <img src="{{p.image}}" alt="" class="checkout_product_img">
+     <div class="checkout_product_info">
+         <p class="checkout_product_title">
+          {{p.title}}
+         </p>
+         <img src="https://cdn2.hubspot.net/hubfs/4567260/0_KZ8hBw7pQZFFt2Mt.png" alt="">
+         <p class="checkout_product_in_stock">In Stock</p>
+        <div class="checkout_product_gift">
+            <p>Dkshop selected items</p>
+        </div>
+        <div class="checkout_options">
+          <div class="checkout_dropdown">
+            </div>
+            <a (click)="removeItem(p)" > Delete</a><!--removing item from cart-->
+        </div>
+     </div>
+     <div class="qantity-container">
+      <h2>Price</h2>
+      <div class="quantity-button">
+        <span style="font-weight: 700;">{{p.quantity*p.price|currency:'INR'}}</span><!--multiplying price &no.of.quantity to get total-->
+       </div>
+    </div>
+     <div class="qantity-container">
+      <h2>Quantity</h2>
+      <div class="quantity-button">
+        <button class="btn" id="plus" type="button" (click)="inc(p.productId,p.quantity)"><i class="fa fa-plus"></i></button><!--increasing quantity-->
+        <span>{{p.quantity}}</span>
+        <button class="btn" id="minus" type="button" (click)="dec(p.productId,p.quantity)"><i class="fa fa-minus"></i></button><!--decreasing quantity-->
+       </div>
+    </div>
+
+  </div>
+
+  <div class="class-right-subtotal">
+    <div class="subtotal" *ngIf="product.length > 0"><!--checking condition-->
+      <p ><span style="font-weight: 500;">Order Total:</span> ({{totalItem}} items) <!--no of items present on basis length of an array-->
+        <strong>{{grandTotal|currency:'INR'}}</strong></p><!--finding total coming from service-->
+          <button routerLink="/checkout">Buy Now</button><!--routing to checkout component-->
+    </div>
+</div>
+</div>
+
+<div class="checkout_empty" *ngIf="product.length == 0"><!--checking condition-->
+  <h2>Your shopping basket is empty</h2>
+  <p>You have no items in your basket</p>
+  <button routerLink="/">shop now</button><!--routing to home component-->
+</div>

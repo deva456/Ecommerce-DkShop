@@ -1,0 +1,62 @@
+
+<h1>Add Product</h1>
+<div mat-dialog-content>
+  <form [formGroup]="productForm">
+    <mat-form-field appearance="legacy">
+      <mat-label>Title</mat-label>
+      <input matInput [formControl]="title">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Image</mat-label>
+      <input matInput [formControl]="image">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Images</mat-label>
+      <input matInput [formControl]="images">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Description</mat-label>
+      <input matInput [formControl]="description">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Price</mat-label>
+      <input matInput [formControl]="price">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Quantity</mat-label>
+      <input matInput [formControl]="quantity">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Short Description</mat-label>
+      <input matInput [formControl]="shortDesc">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Category_id</mat-label>
+      <input matInput [formControl] ="categorie_id">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Category</mat-label>
+      <input matInput [formControl] ="category">
+    </mat-form-field>
+
+    <mat-form-field appearance="standard">
+      <mat-label>Tags</mat-label>
+      <input matInput [formControl] ="tags">
+    </mat-form-field>
+
+</form>
+<div mat-dialog-action [align] = "'end'">
+  <button mat-raised-button color = "warn" mat-dialog-close>Close</button>
+
+  <button style = "margin-left:2em;" mat-raised-button color = "primary" (click) = "save()">{{actionBtn}}</button>
+</div>
+
+</div>

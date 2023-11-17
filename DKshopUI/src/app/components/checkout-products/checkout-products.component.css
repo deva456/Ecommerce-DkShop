@@ -1,0 +1,176 @@
+.price{
+
+  text-align: right;
+}
+.checkout_product{
+  border-top: solid 1px rgb(219, 218, 218);
+  display: flex;
+margin-bottom: 10px;
+padding-top: 10px;
+}
+.checkout_product_img{
+  object-fit: contain;
+  width: 190px;
+  max-height: 200px;
+}
+.checkout_product_info{
+  padding-top: 10px;
+  padding-left: 20px;
+  width: 100%;
+}
+.checkout_product_title{
+  color:#0066c0;
+  font-size: 17px !important;
+  font-weight: 700 !important;
+  line-height: 1.255 !important;
+}
+.checkout_product_info >img{
+  height: 20px;
+  object-fit: contain;
+}
+.checkout_product_in_stock{
+  color:#067D62!important;
+  font-size: 12px!important;
+  line-height: 1.5!important;
+}
+.checkout_product_gift{
+  display: flex;
+  flex-direction: row;
+}
+.checkout_product_gift >input{
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.checkout_product_more{
+  text-decoration: none;
+  margin-left: 5px;
+  color:#0066c0;
+
+}
+.checkout_options{
+  display: flex;
+
+}
+.checkout_options > a{
+text-decoration: none;
+margin: 8px;
+color: #0066c0;
+height: 20px;
+font-size: 12px !important;
+padding-left: 8px;
+border-left: solid lightgray 1px;
+cursor: pointer;
+}
+
+.checkout_products_price{
+
+  margin-top: 12px;
+  text-align: right;
+  font-size: 17px!important;
+  line-height: 1.255!important;
+}
+.checkout_products_subtotal{
+  margin-top: 20px;
+  border-top: solid 1px rgb(219, 218, 218);
+  width: 100%;
+  text-align: right;
+}
+.checkout_products_subtotal{
+  font-size: 17px!important;
+  line-height: 1.255!important;
+}
+
+mat-form-field{
+  background-color: gray;
+}
+
+.checkout_empty{
+  padding-bottom: 11.5%;
+  text-align: center;
+  padding-top: 10px;
+
+}
+.checkout_empty button{
+color: white;
+font-size: 30px;
+  background-color: #f0ac00;
+  opacity: 99%;
+  border: 2px solid;
+  padding: 9px;
+  border-radius: 3px;
+  border-color: #a88134 #9c7e31 #846a29;
+}
+.checkout_empty button:hover{
+ background-color: rgb(237, 163, 78);
+}
+
+.qantity-container{
+  text-align: center;
+}
+
+.quantity-button{
+  padding-right: 260px;
+  display: flex;
+  padding-top: 7%;
+
+}
+
+.qantity-container h2{
+  font-size: 25px;
+  padding-right: 270px;
+
+}
+
+.btn{
+  background-color:#f0c14b;
+  border: none;
+  margin: 0px 30px;
+  font-size: 18px;
+  cursor: pointer;
+  }
+
+  #plus{
+  padding-top: 3px;
+  border-radius: 3px;
+  cursor: pointer;
+  }
+
+  #minus{
+    padding-top: 3.3px;
+    border-radius: 3px;
+    padding-right: 6px;
+    cursor: pointer;
+  }
+
+.class-right-subtotal{
+margin-left: 60%
+}
+
+  .subtotal{
+    display: inline-flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    width: 300px;
+    height: 80px;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    margin: 20px;
+
+  }
+
+
+  .subtotal > button{
+    background-color: #f0c14b;
+    border: 1px solid;
+    border-radius: 2px;
+    width: 100%;
+    height: 30px;
+    color: black;
+    border-color: #a88134 #9c7e31 #846a29;
+    cursor: pointer;
+    margin-top: 5px;
+    padding: 3px 0px;
+  }
+

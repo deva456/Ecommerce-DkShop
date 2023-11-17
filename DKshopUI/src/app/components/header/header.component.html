@@ -1,0 +1,50 @@
+<div class="header">
+  <nav class="header-top">
+  <div class="header-menu">
+    <div class="header-menu-icon">
+<mat-icon routerLink="/home">menu</mat-icon>
+    </div>
+    <!-- <img src="" class="header-menu-logo" alt="amazon logo"> -->
+    <h2 class="logo-header">DKShop</h2>
+    <div class="header-menu-location">
+<span class="header-menu-left-line-one">Delivery to</span>
+
+<span class="header-menu-left-line-two"><strong>India</strong></span>
+    </div>
+    <div class="header-menu-searchbar">
+      <input type="text" name="search" [(ngModel)]="searchterm" (keyup)="search($event)" placeholder="search products here!"class="header-menu-input">
+      <div class="header-menu-searchbar-icon">
+<mat-icon><a href=""> search</a></mat-icon>
+        </div>
+       </div>
+      <div class="header-menu-signin">
+       <a href=""><span routerLink="/login" class="header-menu-top-item">Hello, <strong style="letter-spacing: 1px; color: rgba(255, 162, 0, 0.806);"  > User</strong></span></a>
+       <span routerLink="/login" class="header-menu-bottom-item">Admin Login</span>
+
+      </div>
+      <div class="header-menu-cart">
+       <span routerLink="/wishlist" routerLinkActive="active-link" class="wishlist-cart-icon"><i class="fa-solid fa-heart" ></i> </span>
+       <p class="header-cart-number1"></p>
+     </div>
+     <div routerLink="/checkout-products" routerLinkActive="active-link" class="header-menu-cart" id="prod-cart">
+       <mat-icon><a  class="cartlogo">shopping_cart</a></mat-icon>
+       <p class="header_cart_number"></p>
+       <p class="header-cart-number">{{totalItem}}</p>
+     </div>
+   </div>
+  </nav>
+  </div>
+  <!--  <nav class="header-bottom">
+    <div class="header-bottom-list">
+      <a (click)="filter('')">All Categories</a>
+      <a routerLink="/menscloths">Shirts for Mens</a>
+      <a (click)="filter('Shirts for Mens')">Shirts for Mens</a>
+      <a (click)="filter('Tops for Womens')">Tops for Womens</a>
+      <a (click)="filter('Laptops')">Laptops</a>
+      <a (click)="filter('SmartPhones')">SmartPhones</a>
+      <a (click)="filter('Watches')">Watches</a>
+    </div>
+  </nav>
+ </div>
+ -->
+

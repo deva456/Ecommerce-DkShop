@@ -1,0 +1,53 @@
+<!-- categories displaying on homepage                        -->
+<nav class="header-bottom">
+  <div class="header-bottom-list">
+    <a (click)="filter('')" class="header-hover">Home</a>
+    <a (click)="filter('Shirts for Mens')" class="header-hover">Shirts for Mens</a>
+    <a (click)="filter('Tops for Womens')" class="header-hover">Tops for Womens</a>
+    <a (click)="filter('Laptops')" class="header-hover">Laptops</a>
+    <a (click)="filter('SmartPhones')" class="header-hover">SmartPhones</a>
+    <a (click)="filter('Watches')" class="header-hover">Watches</a>
+  </div>
+</nav>
+
+<!-- Banner displaying on homepage                        -->
+
+<div class="banner">
+  <h2 class="banner-title1">Expect the unexpected.</h2>
+ <h2 class="banner-title2">Experience the lifestyle.</h2>
+ </div>
+
+
+
+<!-- products displaying on homepage                        -->
+
+<div class="products" >
+  <div class="product" >
+    <mat-card *ngFor="let dt of filtercategory  | filter:searchkey:'tags' | paginate: { itemsPerPage: 8, currentPage: p } ">
+     <span  *ngIf="!dt.addedtocart"> <div *ngIf="!dt.addedtowishlist" class="wishlist">
+        <i class="fa-regular fa-heart" (click)="updateBool(dt)" ></i><!-- color heart red-->
+      </div>
+     <div *ngIf="dt.addedtowishlist" class="wishlist" >
+      <i class="fa-solid fa-heart" (click)="updateBool(dt)" ></i><!-- remove heart color -->
+    </div></span>
+     <img  src="{{dt.image}}"class="product-img" /><!-- image -->
+      <p><strong>{{dt.title}}</strong></p><!-- -->
+      <p>{{dt.shortDesc}}</p><!--short description -->
+      <p class="money"> <strong>{{dt.price | currency:'INR'}}</strong></p><!-- -->
+
+      <!-- if prodcut is empty show this by default -->
+    <div *ngIf="!dt.addedtocart">
+     <button class="Add-to-cart"  (click)="addtocart(dt);updateCartBool(dt)">  Add to cart </button>
+    </div>
+
+    <!--if product added to cart show this -->
+     <div *ngIf="dt.addedtocart" >
+      <button class="Add-to-cart1" (click)="removeCartItem(dt);updateCartBool(dt);"><i class="fa-solid fa-circle-check" id="check"></i><strong> Product Added</strong></button>
+    </div>
+    </mat-card>
+  </div>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls><!--pagination end -->
+</div>
+
+
+

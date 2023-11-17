@@ -1,0 +1,30 @@
+<div class="checkout_products" *ngIf="wishlistArray.length !=0 "><div class="products" ><!-- checking condition-->
+  <div class="product" *ngFor="let w of wishlistArray "  ><!-- running for loop-->
+    <mat-card *ngIf="w.addedtowishlist" ><!-- checking condition if item added to wishlist or not-->
+     <img src="{{w.image}}" class="product-img" />
+      <p><strong>{{w.title}}</strong></p>
+      <p>{{w.shortDesc}}</p>
+      <p class="money"> <strong>{{w.price | currency:'INR'}}</strong></p>
+
+    <div *ngIf="!w.addedtocart"><!-- checking condition if item not added to cart then show below code-->
+      <div >
+     <button class="Add-to-cart" (click)="addToCart(w);removeWislistCartItem(w);updateBool(w)">  Add to cart </button><!--adding to cart -->
+     <button class="removeCart" (click)="removeWislistCartItem(w);updateBool(w)">  Remove </button><!-- remove from cart-->
+    </div>
+</div>
+     <div *ngIf="w.addedtocart" ><!-- checking condition if addedtocart is true show below code-->
+      <button class="Add-to-cart1" ><i class="fa-solid fa-circle-check" id="check"></i><strong> Product Added</strong></button>
+     </div>
+    </mat-card>
+  </div>
+</div>
+</div>
+<!-- checking condition if array is empty display below code-->
+<div class="checkout_empty" *ngIf="wishlistArray.length == 0">
+  <h2>Your shopping basket is empty</h2>
+  <p>Oop's! You have no items in your wishlist</p>
+  <button routerLink="/">shop now</button>
+</div>
+
+
+

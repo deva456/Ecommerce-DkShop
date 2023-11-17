@@ -1,0 +1,116 @@
+#leftbox {
+  float:left;
+  background:#232f3e;
+  width:25%;
+  height:5em;
+}
+#middlebox{
+  float:left;
+  background:#232f3e;
+  width:50%;
+  height:5em;
+}
+#rightbox{
+  float:right;
+  background:#232f3e;
+  width:25%;
+  height:5em;
+}
+.top
+{
+  color:antiquewhite;
+  font-size: 2.5em;
+  margin-left:2.5em;
+}
+.btn
+{
+  height:2.5em;
+  width:8em;
+  background-color: cadetblue;
+  border:none;
+  color:white;
+  border-radius: 1em;
+  font-weight: 200;
+  font-size: 1em;
+}
+
+/* to disply products on admin panel */
+
+ .products{
+  display: flex;
+  flex-wrap: wrap;
+ padding-top:6em;
+  padding-left: 0.2em;
+  padding-bottom: 3em;
+
+  justify-content: center;
+}
+
+.product > mat-card > img
+{
+  height: 200px;
+  margin-bottom: 10px;
+}
+h1{
+  font-size:2em;
+}
+.editbtn
+{
+  height:2.5em;
+  width:5em;
+  background-color: rgb(96, 197, 99);
+  border:none;
+  color:white;
+  border-radius: 1em;
+  font-weight: 600;
+  font-size: 1em;
+  cursor: pointer;
+
+}
+
+.editbtn:hover{
+  background-color: rgb(6, 142, 10);
+  height: 2.6em;
+  width: 5.2em;
+}
+
+.deletebtn
+{
+  height:2.5em;
+  width:5em;
+  background-color: rgba(245, 79, 28, 0.865);
+  border:none;
+  color:white;
+  border-radius: 1em;
+  font-weight: 600;
+  font-size: 1em;
+  margin-left:1em;
+  cursor: pointer;
+}
+.deletebtn:hover{
+  background-color: rgb(250, 2, 2);
+  height: 2.6em;
+  width: 5.2em;
+}
+
+/* .product > mat-card > img{
+  /* object-fit: contain; */
+  /* height: 155px;
+  margin-bottom: 10px;
+  }  */
+
+  .product > mat-card{
+  display: inline-block;
+  min-height: 200px;
+  width: 500px;
+  align-items: center;
+  text-align: center;
+  margin: 15px;
+  border-radius: 10px;
+  margin-left: 60px;
+
+  }
+
+  .product>mat-card:hover{
+    background-color: rgba(188, 185, 182, 0.886);
+  }
